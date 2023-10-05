@@ -1,0 +1,112 @@
+header {
+  padding-top: 60px;
+  display: flex;
+  background: radial-gradient(
+      490px circle at calc(100% + 75px) 50%,
+      var(--light-green) 50%,
+      transparent 50%
+    ),
+    radial-gradient(490px circle at 62% calc(100% - 49px), var(--light-green) 50%, transparent 50%);
+  background-color: var(--bg-color);
+}
+.content {
+  h1 {
+    max-width: 590px;
+  }
+  p {
+    top: 23px;
+    max-width: 394px;
+  }
+  .buttons {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+  }
+  .menu_btn {
+    margin-left: 13px;
+  }
+}
+.coffee_display {
+  // margin-left: auto;
+  margin: 0 auto;
+  display: flex;
+  background-image: url('/assets/_about/coffee_display.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 463px;
+  height: 463px;
+  .coffee_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 276px;
+    height: 64px;
+    padding: 6px;
+
+    border-radius: 42px;
+    background: linear-gradient(
+      93deg,
+      rgba(255, 255, 255, 0.4) 0.82%,
+      rgba(255, 255, 255, 0.7) 96.47%
+    );
+    backdrop-filter: blur(2px);
+    .coffee_name_inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      border-radius: 42px;
+      background: #fff;
+
+      color: var(--main-color);
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+  .coffee_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 64px;
+    padding: 6px;
+
+    border-radius: 42px;
+    background: linear-gradient(
+      93deg,
+      rgba(255, 255, 255, 0.4) 0.82%,
+      rgba(255, 255, 255, 0.7) 96.47%
+    );
+    backdrop-filter: blur(2px);
+    .coffee_price_inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      border-radius: 42px;
+      background: #fff;
+
+      color: var(--main-color);
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}
+
+.coffee_name {
+  position: relative;
+  left: -120px;
+  top: 360px;
+}
+.coffee_price {
+  position: relative;
+  right: -50px;
+  top: 40px;
+}
