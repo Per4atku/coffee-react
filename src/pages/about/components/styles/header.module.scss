@@ -2,23 +2,23 @@ header {
   padding-top: 60px;
   display: flex;
   background: radial-gradient(
-      490px circle at calc(100% + 75px) 50%,
+      652px circle at calc(100% + 150px) 50%,
       var(--light-green) 50%,
       transparent 50%
     ),
-    radial-gradient(490px circle at 62% calc(100% - 49px), var(--light-green) 50%, transparent 50%);
+    radial-gradient(652px circle at 66% calc(100% + 60px), var(--light-green) 50%, transparent 50%);
   background-color: var(--bg-color);
 }
 .content {
   h1 {
-    max-width: 590px;
+    max-width: 786px; //(590)
   }
   p {
-    top: 23px;
-    max-width: 394px;
+    margin-top: 23px;
+    max-width: 525px; //(394)
   }
   .buttons {
-    margin-top: 32px;
+    margin-top: 42px;
     display: flex;
     align-items: center;
   }
@@ -34,23 +34,24 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 463px;
-  height: 463px;
+  width: 617px; //463
+  height: 617px; //463
   .coffee_name {
+    filter: drop-shadow(-2px 19px 32px rgba(48, 45, 38, 0.19));
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 276px;
-    height: 64px;
-    padding: 6px;
+    width: 368px; //276
+    height: 85px; //64
+    padding: 8px; //6
 
-    border-radius: 42px;
+    border-radius: 56px; //42
     background: linear-gradient(
       93deg,
       rgba(255, 255, 255, 0.4) 0.82%,
       rgba(255, 255, 255, 0.7) 96.47%
     );
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px); //2
     .coffee_name_inner {
       display: flex;
       justify-content: center;
@@ -58,24 +59,25 @@ header {
       width: 100%;
       height: 100%;
 
-      border-radius: 42px;
+      border-radius: 56px; //42
       background: #fff;
 
       color: var(--main-color);
       text-align: center;
-      font-size: 24px;
+      font-size: 28px; //24
       font-weight: 600;
     }
   }
   .coffee_price {
+    filter: drop-shadow(-2px 19px 32px rgba(48, 45, 38, 0.19));
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 64px;
-    padding: 6px;
+    width: 200px; //150
+    height: 85px; //64
+    padding: 8px; //6
 
-    border-radius: 42px;
+    border-radius: 56px; //42
     background: linear-gradient(
       93deg,
       rgba(255, 255, 255, 0.4) 0.82%,
@@ -89,12 +91,12 @@ header {
       width: 100%;
       height: 100%;
 
-      border-radius: 42px;
+      border-radius: 56px; //42
       background: #fff;
 
       color: var(--main-color);
       text-align: center;
-      font-size: 24px;
+      font-size: 28px; //24
       font-weight: 600;
     }
   }
@@ -102,11 +104,11 @@ header {
 
 .coffee_name {
   position: relative;
-  left: -120px;
-  top: 360px;
+  left: -160px; //120
+  top: 480px; //360
 }
 .coffee_price {
   position: relative;
-  right: -50px;
-  top: 40px;
+  right: -66px; //50
+  top: 53px; //40
 }
