@@ -1,13 +1,13 @@
 import { useState } from "react";
-import styles from "./styles/navbar.module.scss";
 import { HiOutlineX, HiOutlineMenu } from "react-icons/hi";
 
 const Cart = ({ itemsCount }) => {
   return (
-    <div className={styles.cart_container}>
-      <div className={styles.cart}>
+    <div
+      className="flex fixed bottom-10px right-20px w-50px h-50px rounded-full shadow-3xl bg-white items-center justify-center
+                    lg:static lg:bg-transparent lg:shadow-none">
+      <div className="cursor-pointer relative right-0.5 bottom-0.5">
         <svg
-          className={styles.cart_icon}
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="26"
@@ -29,7 +29,7 @@ const Cart = ({ itemsCount }) => {
         </svg>
         {itemsCount > 0 && (
           <svg
-            className={styles.ellipse}
+            className="absolute -right-1 top-0"
             xmlns="http://www.w3.org/2000/svg"
             width="10"
             height="10"
@@ -47,14 +47,14 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="container">
-      <a href="#" className={styles.logo}>
-        <img src="/assets/logo.svg" alt="logo" />
-        <div className={styles.logo_name}>Cotask</div>
+    <nav className="wrap flex items-center justify-between h-20 bg-bg md:h-24 lg:h-32">
+      <a href="#" className="flex items-center gap-1 md:gap-2 lg:gap-2.5">
+        <img src="/assets/logo.svg" alt="logo" className="w-3/5 md:w-4/5 lg:w-full" />
+        <div className=" text-accent text-lg sm:text-xl">Cotask</div>
       </a>
-      <ul className={styles.links_container}>
+      <ul className="hidden lg:flex gap-8">
         <li>
-          <a className={styles.current_link} href="#">
+          <a className="text-black text-lg" href="#">
             About us
           </a>
         </li>
@@ -65,8 +65,8 @@ const Navbar = () => {
           <a href="#">Delivery</a>
         </li>
       </ul>
-      <div className={styles.hub}>
-        <div className={styles.search_bar}>
+      <div className="flex w-full justify-end mx-2 items-center lg:mx-5 lg:w-auto">
+        <div className="flex rounded-[35px] lg:p-[8px_12px] lg:shadow-[6px_2px_24px_#00000021] lg:bg-white">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,37 +82,41 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <input type="text" placeholder="Cappuccino" />
+          <input type="text" placeholder="Cappuccino" className="mx-3 w-40 hidden lg:block" />
         </div>
         <Cart itemsCount={1} />
       </div>
       <button
-        className={styles.menu_icon}
+        className="flex lg:hidden"
         onClick={() => {
           setToggleMenu(true);
         }}>
         <HiOutlineMenu size={25} color={"#12463a"} />
       </button>
       {toggleMenu && (
-        <div className={`${styles.menu} fade-in`}>
+        <div className="fade-in absolute bg-white flex justify-center items-center h-[100vh] w-full top-0 left-0">
           <button
-            className={styles.cross_icon}
+            className="absolute right-12 top-12"
             onClick={() => {
               setToggleMenu(false);
             }}>
             <HiOutlineX size={35} color={"#12463a"} />
           </button>
-          <ul className={styles.links_container_fade}>
-            <li>
-              <a className={styles.current_link} href="#">
+          <ul>
+            <li className="text-center my-5">
+              <a className="text-xl text-accent" href="#">
                 About us
               </a>
             </li>
-            <li>
-              <a href="#">Our Product</a>
+            <li className="text-center my-5">
+              <a href="#" className="text-xl">
+                Our Product
+              </a>
             </li>
-            <li>
-              <a href="#">Delivery</a>
+            <li className="text-center my-5">
+              <a href="#" className="text-xl">
+                Delivery
+              </a>
             </li>
           </ul>
         </div>
