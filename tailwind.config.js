@@ -3,6 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage:{
+        "green-circle-200": "radial-gradient(200px circle at 50% 100%, #12463a 49.7%, transparent 50%)",
+        "green-circle-240": "radial-gradient(240px circle at 50% 100%, #12463a 49.7%, transparent 50%)",
+        "green-circle-280": "radial-gradient(280px circle at 50% 100%, #12463a 49.7%, transparent 50%)",
+        "green-circle-300": "radial-gradient(300px circle at 50% 100%, #12463a 49.7%, transparent 50%)",
+        "green-circle-340": "radial-gradient(340px circle at 50% 100%, #12463a 49.7%, transparent 50%)",
+      },
+      fontSize: {
+        "calc_5vw_.5rem" : "calc(5vw + .5rem)"
+      },
       screens: {
         "xs": "400px"
       },
