@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        "xs": "400px"
+      },
       colors: {
         "accent": "#12463a",
         "bg": "#e2ede9",

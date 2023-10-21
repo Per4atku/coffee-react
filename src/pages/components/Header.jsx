@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="wrap flex pt-2 bg-bg flex-col sm:flex-row sm:items-center lg:pt-5">
+    <header className="wrap flex pt-2 pb-52 bg-bg flex-col sm:flex-row sm:items-center sm:pb-60 lg:pt-5">
       <div className="w-full">
         <h1 className="text-3xl w-full md:text-4xl lg:text-5xl lg:leading-[4rem] xl:text-6xl xl:leading-[5rem]">
           Enjoy your coffee <br />
@@ -20,17 +20,13 @@ const Header = () => {
         </div>
       </div>
 
-      {/* <img
+      <img
         src="/assets/_about/coffee_display.png"
         alt="Coffee"
         className="min-w-[250px] max-w-[300px] w-4/5 mt-10 mx-auto md:max-w-[400px] md:mx-0"
       />
-      <div>
-        <div>Cappucino</div>
-      </div>
-      <div>
-        <div>18K</div>
-      </div> */}
+      <div>Cappucino</div>
+      <div>18k</div>
     </header>
   );
 };
