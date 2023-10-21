@@ -3,6 +3,7 @@ import Navbar from "../partials/Navbar";
 import CoffeeShop from "./components/CoffeeShop";
 import Header from "./components/Header";
 import PopularProducts from "./components/PopularProducts";
+import Discover from "./components/Discover";
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
       <Header />
       <PopularProducts />
       <CoffeeShop />
+      <Discover />
       <Footer />
     </>
   );
