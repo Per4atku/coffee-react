@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #f3f3f3;
+}
+
 .wrap {
   @apply px-[10px] sm:px-[20px] md:px-[30px] lg:px-[40px] 2xl:px-[60px];
+}
+.slick-slider .slick-dots .slick-active div {
+  @apply bg-aqua;
+}
+.slick-slider .slick-dots {
+  @apply -bottom-12;
+}
+.product-content h6 {
+  @apply text-sm sm:text-2xl;
+}
+.product-content a {
+  @apply text-xs text-[#7E7D7A] underline xs:text-sm;
 }
