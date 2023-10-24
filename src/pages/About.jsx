@@ -7,6 +7,7 @@ import Discover from "./components/Discover";
 import Features from "./components/Features";
 import Base from "./components/Base";
 import Products from "./components/Products";
+import Blog from "./components/Blog";
 
 const About = () => {
   return (
@@ -19,6 +20,7 @@ const About = () => {
       <Base />
       <Features />
       <Products />
+      <Blog />
       <Footer />
     </>
   );

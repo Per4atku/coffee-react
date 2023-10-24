@@ -17,6 +17,7 @@ export default {
         "xs": "400px"
       },
       colors: {
+        "dark": "#111",
         "accent": "#12463a",
         "bg": "#e2ede9",
         "bg-accent": "#cfe3dc",
