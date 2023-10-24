@@ -8,11 +8,12 @@ import Features from "./components/Features";
 import Base from "./components/Base";
 import Products from "./components/Products";
 import Blog from "./components/Blog";
+import Feedback from "./components/Feedback";
 
 const About = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Header />
       <PopularProducts />
       <CoffeeShop />
@@ -21,7 +22,8 @@ const About = () => {
       <Features />
       <Products />
       <Blog />
-      <Footer />
+      <Footer /> */}
+      <Feedback />
     </>
   );
 };

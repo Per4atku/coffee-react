@@ -23,11 +23,11 @@ const BlogItem = ({ title, category, date, image, profile_photo, author }) => {
       </div>
       <div className="self-end flex flex-col gap-5 pb-8 justify-end items-center w-full h-72 bg-gradient-to-t from-[rgba(18,70,58,0.92)] from-0% to-[rgba(18,70,58,0.00)]">
         <h6 className="bg-dark w-5/12 py-1 text-center text-white text-lg">{category}</h6>
-        <h5 className="text-center text-white text-2xl w-4/5">{title}</h5>
+        <h4 className="text-center text-white text-2xl w-4/5">{title}</h4>
         <div className="flex w-full items-center gap-2 justify-center">
-          <p className="text-white">Posted by </p>
+          <div className="text-white">Posted by </div>
           <img src={profile_photo} alt={author} className="rounded-full w-9" />
-          <p className="text-white">{author}</p>
+          <div className="text-white">{author}</div>
           <img src="/assets/ui/mail.svg" alt="mail" />
           <img src="/assets/ui/share.svg" alt="share" />
         </div>
