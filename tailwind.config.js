@@ -23,7 +23,8 @@ export default {
         "bg-accent": "#cfe3dc",
         "aqua":"#4bb79e",
         "reservation": "rgba(18, 70, 58, 0.90)",
-        "off-white": "#f3f3f3"
+        "off-white": "#f3f3f3",
+        "p-gray": "#D9D9D9"
       },
       boxShadow: {
         "3xl": "0px 4px 4px rgba(0, 0, 0, 0.25)",

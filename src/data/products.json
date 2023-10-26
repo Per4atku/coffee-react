@@ -1,0 +1,22 @@
+{
+  "coffee-drinks": [
+    {
+      "name": "Espresso",
+      "price": "21 K",
+      "image": "https://i.ibb.co/ch6xk8m/espresso.png",
+      "rating": "4.8"
+    },
+    {
+      "name": "Vanilla Latte",
+      "price": "12 K",
+      "image": "https://i.ibb.co/FVRVLSV/latte.png",
+      "rating": "4.8"
+    },
+    {
+      "name": "Hazelnut Latte",
+      "price": "23 K",
+      "image": "https://i.ibb.co/rQ3jcZy/hazeinut.png",
+      "rating": "4.8"
+    }
+  ]
+}

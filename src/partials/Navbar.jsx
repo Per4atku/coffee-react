@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HiOutlineX, HiOutlineMenu } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Cart = ({ itemsCount }) => {
   return (
@@ -48,21 +49,21 @@ const Navbar = () => {
 
   return (
     <nav className="wrap flex items-center justify-between h-20 bg-bg md:h-24 lg:h-32">
-      <a href="#" className="flex items-center gap-1 md:gap-2 lg:gap-2.5">
+      <Link to="/" className="flex items-center gap-1 md:gap-2 lg:gap-2.5">
         <img src="/assets/logo.svg" alt="logo" className="w-3/6 lg:w-20 flex-shrink-0" />
         <div className=" text-accent text-lg sm:text-xl">Cotask</div>
-      </a>
+      </Link>
       <ul className="hidden lg:flex gap-8">
         <li>
-          <a className="text-black text-lg" href="#">
+          <Link to="/" className="text-black text-lg">
             About us
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">Our Product</a>
+          <Link to="/menu">Our Products</Link>
         </li>
         <li>
-          <a href="#">Delivery</a>
+          <Link to="/delivery">Delivery</Link>
         </li>
       </ul>
       <div className="flex w-full justify-end mx-2 items-center lg:mx-5 lg:w-auto">

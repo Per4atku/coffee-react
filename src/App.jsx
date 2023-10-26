@@ -1,17 +1,26 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-
-import Navbar from "./partials/Navbar";
-import Footer from "./partials/Footer";
 import About from "./pages/About";
+import Menu from "./pages/Menu";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <About />,
+  },
+  {
+    path: "/menu",
+    element: <Menu />,
+  },
+  {
+    path: "/delivery",
+    element: <h1 className="text-center">I won't make delivery page, FUCK OFF</h1>,
+  },
+]);
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <About />
+      <RouterProvider router={router} />
     </>
   );
 }
