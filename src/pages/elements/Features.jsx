@@ -63,7 +63,7 @@ const Features = () => {
     },
   ];
   return (
-    <section className="wrap flex flex-col gap-4 items-center text-center  mt-20 xl:mt-40">
+    <section className="wrap flex flex-col gap-4 items-center text-center  mt-28 xl:mt-44">
       <h3 className="text-[28px] font-medium xs:text-3xl sm:text-4xl lg:text-5xl">
         Why are we different
       </h3>

@@ -1,6 +1,6 @@
 const Discover = () => {
   return (
-    <section className="wrap mt-20 flex flex-col sm:flex-row sm:gap-5 sm:items-center md:gap-12 lg:gap-16 xl:gap-20 2xl:gap-28">
+    <section className="wrap mt-28 flex flex-col sm:flex-row sm:gap-5 sm:items-center md:gap-12 lg:gap-16 xl:gap-20 xl:mt-44 2xl:gap-28">
       <img
         src="https://i.ibb.co/dkhW8LD/unsplash-3n3m-Po-Gko8g.png"
         alt=""

@@ -33,7 +33,7 @@ const Base = () => {
     customPaging: (i) => <div className="bg-[#D9D9D9] rounded-full h-2.5 w-2.5"></div>,
   };
   return (
-    <section className=" text-center mx-auto mt-12 xs:w-full xs:max-w-[496px] sm:mt-14 md:max-w-[1068px] md:mt-20 lg:mt-36">
+    <section className=" text-center mx-auto mt-28 xs:w-full xs:max-w-[496px] sm:mt-14 md:max-w-[1068px] md:mt-20 lg:mt-36 xl:mt-44">
       <h3 className="text-[28px] font-medium xs:text-3xl sm:text-4xl lg:text-5xl">
         Coffee Build Your Base
       </h3>

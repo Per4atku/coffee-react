@@ -2,14 +2,14 @@ import data from "./Feedback.data.js";
 
 const Feedback = () => {
   return (
-    <section className="wrap flex flex-col items-center text-center">
+    <section className="wrap flex flex-col items-center my-28 text-center xl:my-44">
       <h3 className="text-[28px] font-medium xs:text-3xl sm:text-4xl lg:text-5xl">
         Our coffee perfection feedback
       </h3>
-      <p className="text-base w-5/6 sm:text-lg lg:text-xl lg:mt-4">
+      <p className="text-base w-5/6 mt-2 sm:text-lg lg:text-xl lg:mt-4">
         We don’t just make your coffee, we make your day!
       </p>
-      <div className="flex flex-col items-center bg-bg border border-[#BCBCBC] pb-24 max-w-[980px] relative">
+      <div className="flex flex-col items-center bg-bg border border-[#BCBCBC] mt-10 pb-24 max-w-[980px] relative">
         <img
           src="/assets/_about/quotes.svg"
           alt="quotes"

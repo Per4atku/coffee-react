@@ -4,7 +4,7 @@ import { HiOutlineX, HiOutlineMenu } from "react-icons/hi";
 const Cart = ({ itemsCount }) => {
   return (
     <div
-      className="flex fixed bottom-10px right-20px w-50px h-50px rounded-full shadow-3xl bg-white items-center justify-center
+      className="flex fixed bottom-2 right-5 w-12 h-12 rounded-full shadow-3xl bg-white items-center justify-center
                     lg:static lg:bg-transparent lg:shadow-none">
       <div className="cursor-pointer relative right-0.5 bottom-0.5">
         <svg
