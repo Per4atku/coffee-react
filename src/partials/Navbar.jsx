@@ -105,19 +105,19 @@ const Navbar = () => {
           </button>
           <ul>
             <li className="text-center my-5">
-              <a className="text-xl text-accent" href="#">
+              <Link to="/" className="text-accent text-xl">
                 About us
-              </a>
+              </Link>
             </li>
             <li className="text-center my-5">
-              <a href="#" className="text-xl">
-                Our Product
-              </a>
+              <Link to="/menu" className="text-xl">
+                Our Products
+              </Link>
             </li>
             <li className="text-center my-5">
-              <a href="#" className="text-xl">
+              <Link to="/delivery" className="text-xl">
                 Delivery
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

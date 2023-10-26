@@ -9,11 +9,9 @@ const Menu = () => {
     <>
       <Navbar />
       <section className="wrap max-w-[1200px] mx-auto">
-        <div>
-          <h4 className="font-bold text-xl border-b border-solid border-p-gray py-2">
-            Coffee Drinks
-          </h4>
-          <div className="flex justify-between gap-10 flex-wrap">
+        <div className="flex flex-col">
+          <h4 className="font-bold text-xl text-center py-2">Coffee Drinks</h4>
+          <div className="grid grid-cols-[256px] gap-y-6 mx-auto border-t pt-5 border-solid border-p-gray sm:grid-cols-[256px_256px] sm:gap-x-8">
             {products["coffee-drinks"].map((product, index) => (
               <CoffeeDrinkCard
                 key={index}
