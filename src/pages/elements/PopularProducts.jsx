@@ -3,19 +3,19 @@ import { HiStar } from "react-icons/hi";
 const products = [
   {
     name: "Espresso",
-    price: "21 K",
+    price: "21$",
     image: "https://i.ibb.co/ch6xk8m/espresso.png",
     rating: "4.8",
   },
   {
     name: "Vanilla Latte",
-    price: "12 K",
+    price: "12$",
     image: "https://i.ibb.co/FVRVLSV/latte.png",
     rating: "4.8",
   },
   {
     name: "Hazelnut Latte",
-    price: "23 K",
+    price: "23$",
     image: "https://i.ibb.co/rQ3jcZy/hazeinut.png",
     rating: "4.8",
   },
