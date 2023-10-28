@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { HiOutlineX, HiOutlineMenu, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart, decrementQuantity, incrementQuantity } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 
 const Cart = ({ itemsCount }) => {
@@ -37,6 +39,7 @@ const Cart = ({ itemsCount }) => {
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const cart = useSelector((state) => state.cart);
 
   return (
     <nav className="wrap flex items-center justify-between h-20 bg-bg md:h-24 lg:h-32">
@@ -57,7 +60,7 @@ const Navbar = () => {
           <Link to="/delivery">Delivery</Link>
         </li>
       </ul>
-      <Cart itemsCount={1} />
+      <Cart itemsCount={cart.length} />
       <button
         className="flex md:hidden"
         onClick={() => {
@@ -98,36 +101,48 @@ const Navbar = () => {
 };
 
 const CartContent = ({ setToggleCart }) => {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const calculateTotal = () => {
+    let price = 0;
+    cart.forEach((item) => (price += item.price * item.quantity));
+    return price;
+  };
   return (
     <div className="bg-white w-[90vw] rounded-2xl absolute bottom-0 right-0 xs:w-[380px] md:right-0 md:top-12 md:bottom-auto ">
       <div>
-        <h4 className="font-bold p-4">Cart items (3)</h4>
+        <h4 className="font-bold p-4">Cart items ({cart.length})</h4>
         <ul className="px-2">
-          <li className="flex items-center justify-between">
-            <div
-              className="w-20 aspect-square bg-center bg-contain bg-no-repeat "
-              style={{ backgroundImage: "url(https://i.ibb.co/FVRVLSV/latte.png)" }}></div>
-            <span>
-              Vanilla latte <b className="text-accent font-bold">(Hot)</b>
-            </span>
-            <div className="font-medium text-accent">23$</div>
+          {cart?.map((item) => (
+            <li className="flex items-center ">
+              <div
+                className="w-20 aspect-square bg-center bg-contain bg-no-repeat "
+                style={{ backgroundImage: `url(${item.image})` }}></div>
+              <span>
+                {item.name}{" "}
+                <b className="text-accent font-bold">
+                  {item.hot ? "(Hot)" : item.hot === false ? "(Cold)" : ""}
+                </b>
+              </span>
+              <div className="font-medium text-accent ml-auto mr-4">{item.price}$</div>
 
-            <div className="flex items-center gap-1">
-              <button>
-                <HiOutlineMinusSm size={20} />
-              </button>
-              <span className="font-bold text-lg">1</span>
-              <button>
-                <HiOutlinePlusSm size={20} />
-              </button>
-            </div>
-          </li>
+              <div className="flex items-center gap-1">
+                <button onClick={() => dispatch(decrementQuantity(item.id))}>
+                  <HiOutlineMinusSm size={20} />
+                </button>
+                <span className="font-bold text-lg">{item.quantity}</span>
+                <button onClick={() => dispatch(incrementQuantity(item.id))}>
+                  <HiOutlinePlusSm size={20} />
+                </button>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="p-4 ">
         <div className="flex justify-between border-t border-black border-solid py-3">
           <h4 className="text-xl font-medium text-black">Total:</h4>
-          <div className="text-xl font-bold text-accent">23$</div>
+          <div className="text-xl font-bold text-accent">{calculateTotal()}$</div>
         </div>
         <a href="#" className="  text-accent font-medium text-lg underline">
           Proceed to checkout ➝

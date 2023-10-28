@@ -1,8 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiStar } from "react-icons/hi";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, decrementQuantity, incrementQuantity } from "../redux/cartSlice";
+
+import { HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 
 const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
+  const dispatch = useDispatch();
   const [hot, setHot] = useState(null);
+  const [inCart, setInCart] = useState(false);
+  const cart = useSelector((state) => state.cart);
+
+  const getQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      if (item.id === id) {
+        total = item.quantity;
+      }
+    });
+    if (total === 0) {
+      setInCart(false);
+      setHot(null);
+    }
+    return total;
+  };
+
   return (
     <div className="w-64 p-[14px_16px] bg-white rounded-xl justify-self-center lg:w-80 lg:mt-12">
       <div
@@ -18,7 +40,7 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
         <div className="mt-3">
           <div className="flex justify-between items-center">
             <div className="text-[#111] text-xl tracking-[0.8px]">{name}</div>
-            <div className="text-accent font-medium text-xl tracking-[0.8px]">{price}</div>
+            <div className="text-accent font-medium text-xl tracking-[0.8px]">{price}$</div>
           </div>
           <div className="flex justify-between items-center self-end">
             <div className="flex gap-6">
@@ -28,7 +50,9 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
                   borderColor: hot ? "#12463A" : "#4BB79E",
                   color: hot ? "#12463A" : "#4BB79E",
                 }}
-                onClick={() => setHot(hot === true ? null : true)}>
+                onClick={() => {
+                  !inCart && setHot(hot === true ? null : true);
+                }}>
                 Hot
               </button>
               <button
@@ -37,11 +61,33 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
                   borderColor: hot ? "#4BB79E" : hot === null ? "#4BB79E" : "#12463A",
                   color: hot ? "#4BB79E" : hot === null ? "#4BB79E" : "#12463A",
                 }}
-                onClick={() => setHot(hot === false ? null : false)}>
+                onClick={() => {
+                  !inCart && setHot(hot === false ? null : false);
+                }}>
                 Cold
               </button>
             </div>
-            <button className="w-10 h-10 rounded-[50%] bg-accent"></button>
+            {inCart ? (
+              <div className="flex items-center gap-2 pb-3">
+                <button
+                  onClick={() => {
+                    dispatch(decrementQuantity(id));
+                  }}>
+                  <HiOutlineMinusSm size={25} />
+                </button>
+                <span className="font-bold text-xl">{getQuantity()}</span>
+                <button onClick={() => dispatch(incrementQuantity(id))}>
+                  <HiOutlinePlusSm size={25} />
+                </button>
+              </div>
+            ) : (
+              <button
+                className="w-10 h-10 rounded-[50%] bg-accent"
+                onClick={() => {
+                  dispatch(addToCart({ id, name, price, image, hot_cold, hot }));
+                  setInCart(true);
+                }}></button>
+            )}
           </div>
         </div>
       ) : (
@@ -50,8 +96,28 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
             <div className="text-[#111] text-xl tracking-[0.8px]">{name}</div>
           </div>
           <div className="flex justify-between items-center self-end">
-            <div className="text-accent font-medium text-xl tracking-[0.8px]">{price}</div>
-            <button className="w-10 h-10 rounded-[50%] bg-accent"></button>
+            <div className="text-accent font-medium text-xl tracking-[0.8px]">{price}$</div>
+            {inCart ? (
+              <div className="flex items-center gap-2 pb-3">
+                <button
+                  onClick={() => {
+                    dispatch(decrementQuantity(id));
+                  }}>
+                  <HiOutlineMinusSm size={25} />
+                </button>
+                <span className="font-bold text-xl">{getQuantity()}</span>
+                <button onClick={() => dispatch(incrementQuantity(id))}>
+                  <HiOutlinePlusSm size={25} />
+                </button>
+              </div>
+            ) : (
+              <button
+                className="w-10 h-10 rounded-[50%] bg-accent"
+                onClick={() => {
+                  dispatch(addToCart({ id, name, price, image, hot_cold, hot }));
+                  setInCart(true);
+                }}></button>
+            )}
           </div>
         </div>
       )}
