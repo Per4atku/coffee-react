@@ -1,4 +1,4 @@
-import ProductCard from "../../partials/ProductCard";
+import ProductCard from "../../components/ProductCard";
 import products from "../../data/products.json";
 
 const PopularProducts = () => {

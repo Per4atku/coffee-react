@@ -1,7 +1,7 @@
-import Footer from "../partials/Footer";
-import Navbar from "../partials/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import products from "../data/products.json";
-import ProductCard from "../partials/ProductCard";
+import ProductCard from "../components/ProductCard";
 
 const Menu = () => {
   return (

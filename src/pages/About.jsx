@@ -1,5 +1,5 @@
-import Footer from "../partials/Footer";
-import Navbar from "../partials/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import CoffeeShop from "./elements/CoffeeShop";
 import Header from "./elements/Header";
 import PopularProducts from "./elements/PopularProducts";

@@ -109,7 +109,7 @@ const CartContent = ({ setToggleCart }) => {
     return price;
   };
   return (
-    <div className="bg-white w-[90vw] rounded-2xl absolute bottom-0 right-0 xs:w-[380px] md:right-0 md:top-12 md:bottom-auto ">
+    <div className="bg-white w-[90vw] rounded-2xl absolute bottom-0 max-h-[700px] overflow-y-scroll right-0 xs:w-[380px] md:right-0 md:top-12 md:bottom-auto ">
       <div>
         <h4 className="font-bold p-4">Cart items ({cart.length})</h4>
         <ul className="px-2">
