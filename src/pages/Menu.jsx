@@ -22,6 +22,7 @@ const Menu = () => {
                     image={product.image}
                     color={category.color}
                     hot_cold={product.hot_cold}
+                    id={product.id}
                   />
                 ))}
               </div>

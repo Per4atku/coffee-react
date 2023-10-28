@@ -35,6 +35,7 @@ const PopularProducts = () => {
               image={product.image}
               color={"#4BB79E"}
               hot_cold={true}
+              id={product.id}
             />
           ))}
           <div className="m-auto w-72 h-40 hidden bg-[url(/assets/logo-l.svg)] col-start-3 bg-center bg-contain bg-no-repeat opacity-20 sm:block lg:hidden"></div>

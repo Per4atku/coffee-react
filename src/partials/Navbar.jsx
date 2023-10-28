@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HiOutlineX, HiOutlineMenu, HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { HiOutlineX, HiOutlineMenu, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const Cart = ({ itemsCount }) => {
@@ -99,7 +99,7 @@ const Navbar = () => {
 
 const CartContent = ({ setToggleCart }) => {
   return (
-    <div className="bg-white w-[280px] rounded-2xl absolute bottom-0 right-0 xs:w-[350px] md:right-0 md:top-12 md:bottom-auto ">
+    <div className="bg-white w-[90vw] rounded-2xl absolute bottom-0 right-0 xs:w-[380px] md:right-0 md:top-12 md:bottom-auto ">
       <div>
         <h4 className="font-bold p-4">Cart items (3)</h4>
         <ul className="px-2">
@@ -110,11 +110,17 @@ const CartContent = ({ setToggleCart }) => {
             <span>
               Vanilla latte <b className="text-accent font-bold">(Hot)</b>
             </span>
-            <div className="bg-black h-[1px] w-4 hidden xs:block"></div>
             <div className="font-medium text-accent">23$</div>
-            <button>
-              <HiOutlineX size={20} />
-            </button>
+
+            <div className="flex items-center gap-1">
+              <button>
+                <HiOutlineMinusSm size={20} />
+              </button>
+              <span className="font-bold text-lg">1</span>
+              <button>
+                <HiOutlinePlusSm size={20} />
+              </button>
+            </div>
           </li>
         </ul>
       </div>

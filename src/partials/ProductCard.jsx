@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { HiStar } from "react-icons/hi";
 
-const ProductCard = ({ name, price, image, rating, hot_cold, color }) => {
+const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
+  const [hot, setHot] = useState(null);
   return (
     <div className="w-64 p-[14px_16px] bg-white rounded-xl justify-self-center lg:w-80 lg:mt-12">
       <div
@@ -20,10 +22,22 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color }) => {
           </div>
           <div className="flex justify-between items-center self-end">
             <div className="flex gap-6">
-              <button className="p-[1px_10px] rounded-lg border-2 border-solid font-semibold border-aqua text-aqua tracking-[0.64px] ">
+              <button
+                className="p-[1px_10px] rounded-lg border-2 border-solid font-semibold border-aqua text-aqua tracking-[0.64px] "
+                style={{
+                  borderColor: hot ? "#12463A" : "#4BB79E",
+                  color: hot ? "#12463A" : "#4BB79E",
+                }}
+                onClick={() => setHot(hot === true ? null : true)}>
                 Hot
               </button>
-              <button className="p-[1px_10px] rounded-lg border-2 border-solid font-semibold border-aqua text-aqua tracking-[0.64px] ">
+              <button
+                className="p-[1px_10px] rounded-lg border-2 border-solid font-semibold border-aqua text-aqua tracking-[0.64px] "
+                style={{
+                  borderColor: hot ? "#4BB79E" : hot === null ? "#4BB79E" : "#12463A",
+                  color: hot ? "#4BB79E" : hot === null ? "#4BB79E" : "#12463A",
+                }}
+                onClick={() => setHot(hot === false ? null : false)}>
                 Cold
               </button>
             </div>
