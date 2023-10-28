@@ -6,7 +6,7 @@ const Cart = ({ itemsCount }) => {
   return (
     <div
       className="flex fixed bottom-2 right-5 w-12 h-12 rounded-full shadow-3xl bg-white items-center justify-center
-                    lg:static lg:bg-transparent lg:shadow-none">
+                    md:static md:bg-transparent md:shadow-none">
       <div className="cursor-pointer relative right-0.5 bottom-0.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const Navbar = () => {
         <img src="/assets/logo.svg" alt="logo" className="w-3/6 lg:w-20 flex-shrink-0" />
         <div className=" text-accent text-lg sm:text-xl">Cotask</div>
       </Link>
-      <ul className="hidden lg:flex gap-8">
+      <ul className="hidden md:flex gap-8">
         <li>
           <Link to="/" className="text-black text-lg">
             About us
@@ -66,29 +66,9 @@ const Navbar = () => {
           <Link to="/delivery">Delivery</Link>
         </li>
       </ul>
-      <div className="flex w-full justify-end mx-2 items-center lg:mx-5 lg:w-auto">
-        <div className="flex rounded-[35px] lg:p-[8px_12px] lg:shadow-[6px_2px_24px_#00000021] lg:bg-white">
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none">
-              <path
-                d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                stroke="#12463A"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </button>
-          <input type="text" placeholder="Cappuccino" className="mx-3 w-40 hidden lg:block" />
-        </div>
-        <Cart itemsCount={1} />
-      </div>
+      <Cart itemsCount={1} />
       <button
-        className="flex lg:hidden"
+        className="flex md:hidden"
         onClick={() => {
           setToggleMenu(true);
         }}>
