@@ -99,20 +99,18 @@ const Navbar = () => {
 
 const CartContent = ({ setToggleCart }) => {
   return (
-    <div className="bg-white w-[280px] rounded-2xl absolute bottom-0 right-0 md:right-0 md:top-12 md:bottom-auto">
+    <div className="bg-white w-[280px] rounded-2xl absolute bottom-0 right-0 xs:w-[350px] md:right-0 md:top-12 md:bottom-auto ">
       <div>
         <h4 className="font-bold p-4">Cart items (3)</h4>
         <ul className="px-2">
           <li className="flex items-center justify-between">
-            <img
-              src="https://i.ibb.co/FVRVLSV/latte.png"
-              alt="Vanilla Latte image"
-              className=" w-20"
-            />
+            <div
+              className="w-20 aspect-square bg-center bg-contain bg-no-repeat "
+              style={{ backgroundImage: "url(https://i.ibb.co/FVRVLSV/latte.png)" }}></div>
             <span>
               Vanilla latte <b className="text-accent font-bold">(Hot)</b>
             </span>
-            <div className="bg-black h-[1px] w-4"></div>
+            <div className="bg-black h-[1px] w-4 hidden xs:block"></div>
             <div className="font-medium text-accent">23$</div>
             <button>
               <HiOutlineX size={20} />
