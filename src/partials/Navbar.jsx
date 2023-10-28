@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HiOutlineX, HiOutlineMenu, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, decrementQuantity, incrementQuantity } from "../redux/cartSlice";
+import { decrementQuantity, incrementQuantity } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 
 const Cart = ({ itemsCount }) => {

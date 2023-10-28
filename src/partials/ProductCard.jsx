@@ -11,6 +11,14 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
   const [inCart, setInCart] = useState(false);
   const cart = useSelector((state) => state.cart);
 
+  useEffect(() => {
+    cart.forEach((item) => {
+      if (item.id === id) {
+        setInCart(true);
+      }
+    });
+  }, [cart]);
+
   const getQuantity = () => {
     let total = 0;
     cart.forEach((item) => {
