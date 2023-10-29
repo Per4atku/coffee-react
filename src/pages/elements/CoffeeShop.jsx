@@ -1,6 +1,6 @@
 const CoffeeShop = () => {
   return (
-    <section className="wrap flex flex-col gap-8 sm:flex-row sm:justify-center">
+    <section className="wrap flex flex-col gap-8 max-w-[1200px] mx-auto sm:flex-row sm:justify-center">
       <div className="bg-[url(https://i.ibb.co/xYq232K/image-20.png)] w-full aspect-[9/7] bg-left bg-cover flex sm:w-3/5 sm:max-w-[719px]">
         <div className="bg-off-white w-3/5 h-3/5 self-end flex flex-col">
           <h2 className="leading-6 text-xl my-auto xs:text-calc_5vw_.5rem xs:leading-10 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[60px] ">

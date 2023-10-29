@@ -14,7 +14,8 @@ export default {
         "calc_5vw_.5rem" : "calc(5vw + .5rem)"
       },
       screens: {
-        "xs": "400px"
+        "xs": "400px",
+        "md-lg": "830px"
       },
       colors: {
         "dark": "#111",

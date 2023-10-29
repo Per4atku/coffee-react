@@ -16,7 +16,7 @@ const Blog = () => {
 const BlogItem = ({ title, category, date, image, profile_photo, author }) => {
   return (
     <div
-      className="w-full aspect-[19/21] bg-cover bg-center bg-no-repeat relative flex"
+      className="w-full aspect-[19/21] bg-cover bg-center bg-no-repeat relative flex cursor-pointer"
       style={{ backgroundImage: `url(${image})` }}>
       <div className="absolute flex right-4 top-4 bg-[#F3F3F3] w-16 h-16 justify-center items-center">
         <p className="w-12 text-center leading-6 text-xl text-accent">{date}</p>

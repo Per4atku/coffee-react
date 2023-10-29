@@ -42,7 +42,7 @@ const Navbar = () => {
   const cart = useSelector((state) => state.cart);
 
   return (
-    <nav className="wrap flex items-center justify-between h-20 bg-bg md:h-24 lg:h-32">
+    <nav className="wrap flex relative z-10  items-center justify-between h-20 bg-bg md:h-24 lg:h-32">
       <Link to="/" className="flex items-center gap-1 md:gap-2 lg:gap-2.5">
         <img src="/assets/logo.svg" alt="logo" className="w-3/6 lg:w-20 flex-shrink-0" />
         <div className=" text-accent text-lg sm:text-xl">Cotask</div>
@@ -69,9 +69,9 @@ const Navbar = () => {
         <HiOutlineMenu size={25} color={"#12463a"} />
       </button>
       {toggleMenu && (
-        <div className="fade-in absolute bg-white flex justify-center items-center h-[100vh] w-full top-0 left-0">
+        <div className="fade-in fixed bg-white flex justify-center items-center h-screen w-full top-0 left-0">
           <button
-            className="absolute right-12 top-12"
+            className="absolute right-4 top-6"
             onClick={() => {
               setToggleMenu(false);
             }}>
@@ -109,7 +109,7 @@ const CartContent = ({ setToggleCart }) => {
     return price;
   };
   return (
-    <div className="bg-white w-[90vw] rounded-2xl absolute bottom-0 max-h-[700px] overflow-y-scroll right-0 xs:w-[380px] md:right-0 md:top-12 md:bottom-auto ">
+    <div className="bg-white w-[90vw] rounded-2xl absolute bottom-0  right-0 xs:w-[380px] md:right-0 md:top-12 md:bottom-auto ">
       <div>
         <h4 className="font-bold p-4">Cart items ({cart.length})</h4>
         <ul className="px-2">

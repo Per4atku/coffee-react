@@ -12,7 +12,7 @@ const Menu = () => {
           {products.map((category, index) => (
             <div key={index}>
               <h4 className="font-bold text-xl text-center py-2 mt-8">{category.name}</h4>
-              <div className="grid grid-cols-1 gap-y-4 border-t border-solid border-p-gray pt-4 xs:gap-y-8 sm:grid-cols-2 md:grid-cols-[256px,256px] md:gap-x-8 md:mx-auto lg:grid-cols-2 lg:mx-0 min-[1100px]:grid-cols-3 xl:w-full">
+              <div className="grid grid-cols-1 gap-y-4 border-t border-solid border-p-gray pt-4 xs:gap-y-8 sm:grid-cols-2 md-lg:grid-cols-3 md:gap-x-8 md:mx-auto lg:grid-cols-3 lg:mx-0 xl:w-full">
                 {category.list.map((product, index) => (
                   <ProductCard
                     key={index}
