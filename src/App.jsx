@@ -1,4 +1,5 @@
 import About from "./pages/About";
+import Delivery from "./pages/Delivery";
 import Menu from "./pages/Menu";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/delivery",
-    element: <h1 className="text-center">I won't make delivery page, FUCK OFF</h1>,
+    element: <Delivery />,
   },
 ]);
 

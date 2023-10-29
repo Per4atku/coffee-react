@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Products = () => {
   return (
     <section className="wrap mt-28 xl:mt-44">
@@ -24,7 +26,7 @@ const Products = () => {
           />
           <div className="product-content self-start">
             <h6>Whole beans</h6>
-            <a href="#">Shop Now!</a>
+            <a href="#">Shop now!</a>
           </div>
         </div>
         <div className="flex flex-col justify-between row-start-2 row-end-4 bg-white p-1.5 rounded-xl xs:p-2 sm:p-3 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-5">

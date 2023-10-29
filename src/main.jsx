@@ -5,7 +5,6 @@ import App from "./App.jsx";
 import "./index.css";
 
 import "./__reset.scss";
-import "./__vars.scss";
 import "./__fonts.scss";
 import "./__global.scss";
 import "./__animations.scss";
