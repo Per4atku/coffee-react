@@ -1,3 +1,8 @@
+import ReservationDatePicker from "../../mui/Reservation-components/ReservationDatePicker";
+import ReservationTimeField from "../../mui/Reservation-components/ReservationTimeField";
+import ReservationTextField from "../../mui/Reservation-components/ReservationTextField";
+import ReservationSelect from "../../mui/Reservation-components/ReservationSelect";
+
 const Reservation = () => {
   return (
     <section className="bg-[url(https://i.ibb.co/qRFVGpX/Photo.jpg)] w-full mt-28 bg-center bg-cover flex justify-center items-center xl:mt-44 lg:aspect-[14/8]">
@@ -8,29 +13,21 @@ const Reservation = () => {
         <h4 className="text-xl text-white sm:text-2xl lg:text-3xl">Book your table now</h4>
 
         <form className="grid grid-cols-[3fr,1fr,3fr] grid-rows-[repeat(3,40px)] gap-x-3 gap-y-3 mx-3 max-w-[390px] sm:max-w-[560px] sm:grid-cols-[2fr_1fr_1fr_2fr] sm:grid-rows-[repeat(3,50px)] sm:gap-x-5 sm:gap-y-5">
-          <input
-            type="text"
-            placeholder="Name"
-            className="border border-gray-500 rounded-none border-solid text-white text-sm w-full px-1.5 text-ellipsis sm:col-start-1 sm:col-end-3"
-          />
-          <input
-            type="Date"
-            className="border border-gray-500 rounded-none border-solid text-white text-sm w-full px-1.5 text-ellipsis col-start-2 col-end-4 sm:row-start-2 sm:col-start-4 sm:col-end-5"
-          />
-          <input
-            type="text"
-            placeholder="Person"
-            className="border border-gray-500 rounded-none border-solid text-white text-sm w-full px-1.5 text-ellipsis col-start-1 col-end-2 row-start-2 sm:row-start-2 sm:col-start-1 sm:col-end-2"
-          />
-          <input
-            type="time"
-            className="border border-gray-500 rounded-none border-solid text-white text-sm w-full px-1.5 text-ellipsis col-start-2 col-end-4 row-start-2"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="border border-gray-500 rounded-none border-solid text-white text-sm w-full px-1.5 text-ellipsis col-start-1 col-end-3 row-start-3 sm:col-start-3 sm:col-end-5 sm:row-start-1"
-          />
+          <div className="sm:col-start-1 sm:col-end-3">
+            <ReservationTextField label={"Name"} />
+          </div>
+          <div className="col-start-2 col-end-4 sm:row-start-2 sm:col-start-4 sm:col-end-5">
+            <ReservationDatePicker />
+          </div>
+          <div className="col-start-1 col-end-2 row-start-2 sm:row-start-2 sm:col-start-1 sm:col-end-2">
+            <ReservationSelect />
+          </div>
+          <div className="col-start-2 col-end-4 row-start-2">
+            <ReservationTimeField />
+          </div>
+          <div className="col-start-1 col-end-3 row-start-3 sm:col-start-3 sm:col-end-5 sm:row-start-1">
+            <ReservationTextField label={"Email"} />
+          </div>
           <button className="bg-white sm:row-start-3 sm:col-start-2 sm:col-end-4 text-[#292E36]">
             Book a Table
           </button>

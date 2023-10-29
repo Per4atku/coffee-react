@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HiOutlineX, HiOutlineMenu, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 import { useSelector, useDispatch } from "react-redux";
 import { decrementQuantity, incrementQuantity } from "../redux/cartSlice";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Cart = ({ itemsCount }) => {
   const [toggleCart, setToggleCart] = useState(false);
@@ -40,6 +40,13 @@ const Cart = ({ itemsCount }) => {
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const cart = useSelector((state) => state.cart);
+  const location = useLocation();
+  const navLinks = [
+    { name: "About us", path: "/" },
+    { name: "Our Products", path: "/menu" },
+    { name: "Delivery", path: "/delivery" },
+    // Add more links as needed
+  ];
 
   return (
     <nav className="wrap flex relative z-10  items-center justify-between h-20 bg-bg md:h-24 lg:h-32">
@@ -48,17 +55,15 @@ const Navbar = () => {
         <div className=" text-accent text-lg sm:text-xl">Cotask</div>
       </Link>
       <ul className="hidden md:flex gap-8">
-        <li>
-          <Link to="/" className="text-black text-lg">
-            About us
-          </Link>
-        </li>
-        <li>
-          <Link to="/menu">Our Products</Link>
-        </li>
-        <li>
-          <Link to="/delivery">Delivery</Link>
-        </li>
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            <Link
+              to={link.path}
+              className={location.pathname === link.path ? "text-accent font-bold" : ""}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
       </ul>
       <Cart itemsCount={cart.length} />
       <button
@@ -77,22 +82,18 @@ const Navbar = () => {
             }}>
             <HiOutlineX size={35} color={"#12463a"} />
           </button>
-          <ul>
-            <li className="text-center my-5">
-              <Link to="/" className="text-accent text-xl">
-                About us
-              </Link>
-            </li>
-            <li className="text-center my-5">
-              <Link to="/menu" className="text-xl">
-                Our Products
-              </Link>
-            </li>
-            <li className="text-center my-5">
-              <Link to="/delivery" className="text-xl">
-                Delivery
-              </Link>
-            </li>
+          <ul className="flex flex-col gap-5 text-center text-xl">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  to={link.path}
+                  className={
+                    location.pathname === link.path ? "text-accent font-bold my-5 text-center" : ""
+                  }>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       )}

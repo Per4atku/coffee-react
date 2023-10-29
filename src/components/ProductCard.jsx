@@ -90,7 +90,8 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
               </div>
             ) : (
               <button
-                className="w-10 h-10 rounded-[50%] bg-accent"
+                className="w-10 h-10 rounded-[50%] bg-accent bg-[url(/assets/ui/cart-icon.svg)] bg-center bg-no-repeat"
+                style={{ backgroundSize: "60%" }}
                 onClick={() => {
                   dispatch(addToCart({ id, name, price, image, hot_cold, hot }));
                   setInCart(true);
@@ -120,7 +121,8 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
               </div>
             ) : (
               <button
-                className="w-10 h-10 rounded-[50%] bg-accent"
+                className="w-10 h-10 rounded-[50%] bg-accent bg-[url(/assets/ui/cart-icon.svg)] bg-center bg-no-repeat"
+                style={{ backgroundSize: "60%" }}
                 onClick={() => {
                   dispatch(addToCart({ id, name, price, image, hot_cold, hot }));
                   setInCart(true);
