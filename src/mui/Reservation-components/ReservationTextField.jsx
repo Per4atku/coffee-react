@@ -1,12 +1,18 @@
 import TextField from "@mui/material/TextField";
+import * as React from "react";
 
 const ReservationTextField = ({ label }) => {
+  const [text, setText] = React.useState("");
   return (
     <div>
       <TextField
         label={label}
         variant="outlined"
         fullWidth
+        value={text}
+        onChange={(event) => {
+          setText(event.target.value);
+        }}
         sx={{
           "& .MuiOutlinedInput-notchedOutline": {
             border: "1px solid #858585 !important",
