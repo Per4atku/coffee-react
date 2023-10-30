@@ -27,7 +27,10 @@ The site has a page with products (Menu/Our Products). On this page user can add
 
 The cart is made with *Redux Toolit + redux-persist*
 
-![Menu and Cart preview](https://im.ezgif.com/tmp/ezgif-1-0ffebd9eef.gif "Menu and Cart preview")
+![Product Item preview](https://skrinshoter.ru/s/301023/bxGFrbIT.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-30-10-2023%2012:56:47.jpg "Product Item preview")
+
+
+![Cart preview](https://skrinshoter.ru/s/301023/87SfcdEK.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-30-10-2023%2012:57:09.jpg "Cart preview")
 
 Product items json: `/src/data/products.json`
 
