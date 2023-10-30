@@ -50,16 +50,20 @@ const Base = () => {
 
 const Item = ({ name, price, image }) => {
   return (
-    <Link to={"/menu#accessories"} className="mx-3 flex flex-col items-center">
-      <img src={image} alt={name} className="rounded-3xl" />
-      <h6>{name}</h6>
+    <div className="mx-3 flex flex-col items-center  ">
+      <div
+        style={{ backgroundImage: `url(${image})` }}
+        className="bg-center bg-cover bg-no-repeat aspect-square w-60 rounded-xl"></div>
+      <Link className="underline" to={"/menu#accessories"}>
+        {name}
+      </Link>
       <div className="text-aqua">
         {new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
         }).format(price)}
       </div>
-    </Link>
+    </div>
   );
 };
 

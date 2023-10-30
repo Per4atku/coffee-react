@@ -3,7 +3,9 @@ import items from "./Blog.items.js";
 const Blog = () => {
   return (
     <section className="wrap bg-bg flex flex-col gap-10 mt-28  py-10 lg:gap-16 lg:py-16 xl:gap-24 xl:mt-44 xl:py-16">
-      <h3 className="text-center">Featured Blog</h3>
+      <h3 className="text-center font-medium text-[28px] xs:text-3xl  sm:text-4xl lg:text-5xl">
+        Featured Blog
+      </h3>
       <div className="grid grid-cols-1 max-w-[374px] sm:grid-cols-2 sm:max-w-[776px] lg:grid-cols-3 lg:max-w-[1196px] mx-auto gap-y-7 gap-x-7 ">
         {items.map((i) => (
           <BlogItem key={i.id} {...i} />
