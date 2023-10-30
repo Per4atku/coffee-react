@@ -37,6 +37,8 @@ Product items json: `/src/data/products.json`
 Used *react-slick* to create slider. 
 
 ![Slider preview](https://im.ezgif.com/tmp/ezgif-1-729e76690c.gif "Slider preview")
+
+
 Slider items: `/src/pages/elements/Base.items.js`
 ### MUI Components
 #### Reservation Components
