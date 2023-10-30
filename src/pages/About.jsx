@@ -14,9 +14,16 @@ const Feedback = lazy(() => import("./elements/Feedback"));
 const Reservation = lazy(() => import("./elements/Reservation"));
 import LoadingIndicator from "../mui/LoadingIndicator/LoadingIndicator";
 
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 const About = () => {
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <title>Cotask Coffee</title>
+        </Helmet>
+      </HelmetProvider>
       <Navbar />
       <Header />
       <PopularProducts />

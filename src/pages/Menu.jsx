@@ -4,11 +4,18 @@ import products from "../data/products.json";
 import { Suspense, lazy } from "react";
 import ProductCardSkeleton from "../mui/ProductCardSkeleton/ProductCardSkeleton";
 
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 const ProductCard = lazy(() => import("../components/ProductCard"));
 
 const Menu = () => {
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <title>Menu</title>
+        </Helmet>
+      </HelmetProvider>
       <Navbar />
       <section className="wrap mt-10 xl:mt-14">
         <div className="flex flex-col w-full max-w-[1300px] mx-auto">

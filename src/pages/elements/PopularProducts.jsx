@@ -10,7 +10,7 @@ const PopularProducts = () => {
       <div className="relative bg-accent rounded-[0_0_65px_65px] w-full -top-32 xs:w-80 xs:mx-auto sm:w-full md:w-5/6 md:min-w-[650px] lg:max-w-[1200px] lg:w-[93%]">
         <div className="relative -top-24 grid grid-cols-1 grid-rows-3 gap-y-10 sm:grid-cols-[290px_1fr_290px] sm:grid-rows-2 sm:[&>*:nth-child(2)]:col-start-3 lg:flex lg:justify-around ">
           {products[0].list.slice(0, 3).map((product, index) => (
-            <Suspense fallback={<ProductCardSkeleton />}>
+            <Suspense key={index} fallback={<ProductCardSkeleton />}>
               <ProductCard
                 key={index}
                 name={product.name}
