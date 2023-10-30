@@ -26,7 +26,6 @@ const Header = () => {
         </div>
         <img
           src="/assets/_about/coffee_display.png"
-          onLoad={() => setImageLoaded(true)}
           alt="Coffee"
           className="min-w-[250px] max-w-[300px] w-4/5 mt-10 mx-auto md:max-w-[400px] md:mx-0"
         />
