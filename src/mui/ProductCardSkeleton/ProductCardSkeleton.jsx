@@ -18,6 +18,7 @@ const ProductCardSkeleton = () => {
         sx={{
           width: "100%",
           height: { xs: "11rem", lg: "14rem" },
+          borderRadius: "0.75rem",
         }}
       />
       <Skeleton variant="text" sx={{ fontSize: "1.25rem" }} />
