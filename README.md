@@ -2,8 +2,6 @@
 
 Cotask Coffee is a fictional e-commerce website that sells coffee drinks, accessories, coffee beans, also owns coffee shops around the world. This project shows what a website for such a company might look like.
 
-![Website preview](https://i.ibb.co/w76mR4x/cotask-coffee-shop-web-app.png "Website preview")
-
 ## Explore the website
 https://cotask-coffee-shop.web.app/
 
