@@ -28,12 +28,14 @@ or
 The site has a page with products (Menu/Our Products). On this page user can add a product to cart, increase/decrease the number of products in cart. And also select [Hot], [Cold] or default product (if supported).
 
 The cart is made with *Redux Toolit + redux-persist*
+
 ![Menu and Cart preview](https://im.ezgif.com/tmp/ezgif-1-0ffebd9eef.gif "Menu and Cart preview")
 
 Product items json: `/src/data/products.json`
 
 ### Coffee Build Your Base - Slider
 Used *react-slick* to create slider. 
+
 ![Slider preview](https://im.ezgif.com/tmp/ezgif-1-729e76690c.gif "Slider preview")
 Slider items: `/src/pages/elements/Base.items.js`
 ### MUI Components
@@ -46,4 +48,5 @@ Used custom styled *mui* components in Reservation element:
 ![Reservation preview](https://im.ezgif.com/tmp/ezgif-1-355c6547c7.gif "Reservation preview")
 #### Product item Skeleton
 Used custom *mui* Skeleton component and *React Lazy* for not loaded Product Cards
+
 ![Skeleton preview](https://im.ezgif.com/tmp/ezgif-1-8bb6dab256.gif "Skeleton preview")
