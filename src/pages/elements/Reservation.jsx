@@ -1,7 +1,7 @@
-import ReservationDatePicker from "../../mui/Reservation-components/ReservationDatePicker";
-import ReservationTimeField from "../../mui/Reservation-components/ReservationTimeField";
-import ReservationTextField from "../../mui/Reservation-components/ReservationTextField";
-import ReservationSelect from "../../mui/Reservation-components/ReservationSelect";
+import ReservationDatePicker from "../../mui/Reservation/ReservationDatePicker";
+import ReservationTimeField from "../../mui/Reservation/ReservationTimeField";
+import ReservationTextField from "../../mui/Reservation/ReservationTextField";
+import ReservationSelect from "../../mui/Reservation/ReservationSelect";
 
 const Reservation = () => {
   return (

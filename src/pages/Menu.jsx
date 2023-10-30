@@ -1,7 +1,10 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import products from "../data/products.json";
-import ProductCard from "../components/ProductCard";
+import { Suspense, lazy } from "react";
+import ProductCardSkeleton from "../mui/ProductCardSkeleton/ProductCardSkeleton";
+
+const ProductCard = lazy(() => import("../components/ProductCard"));
 
 const Menu = () => {
   return (
@@ -14,16 +17,18 @@ const Menu = () => {
               <h4 className="font-bold text-xl text-center py-2 mt-8">{category.name}</h4>
               <div className="grid grid-cols-1 gap-y-4 border-t border-solid border-p-gray pt-4 xs:gap-y-8 sm:grid-cols-2 md-lg:grid-cols-3 md:gap-x-8 md:mx-auto lg:grid-cols-3 lg:mx-0 xl:w-full">
                 {category.list.map((product, index) => (
-                  <ProductCard
-                    key={index}
-                    name={product.name}
-                    price={product.price}
-                    rating={product.rating}
-                    image={product.image}
-                    color={category.color}
-                    hot_cold={product.hot_cold}
-                    id={product.id}
-                  />
+                  <Suspense fallback={<ProductCardSkeleton />}>
+                    <ProductCard
+                      key={index}
+                      name={product.name}
+                      price={product.price}
+                      rating={product.rating}
+                      image={product.image}
+                      color={category.color}
+                      hot_cold={product.hot_cold}
+                      id={product.id}
+                    />
+                  </Suspense>
                 ))}
               </div>
             </div>
