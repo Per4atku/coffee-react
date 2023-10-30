@@ -1,8 +1,12 @@
-# React + Vite
+# Cotask Coffee
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cotask Coffee is a fictional e-commerce website that sells coffee drinks, accessories, coffee beans, also owns coffee shops around the world. This project shows what a website for such a company might look like.
 
-Currently, two official plugins are available:
+##Explore the website
+https://cotask-coffee-shop.web.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+or
+1. `git clone https://github.com/Per4atku/coffee-react.git`
+2. `cd coffee-react`
+3.  `npm i`  or  `yarn`
+4. `npm run dev` or `yarn dev`
