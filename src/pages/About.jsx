@@ -1,15 +1,18 @@
+import { Suspense, lazy } from "react";
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CoffeeShop from "./elements/CoffeeShop";
+const CoffeeShop = lazy(() => import("./elements/CoffeeShop"));
 import Header from "./elements/Header";
 import PopularProducts from "./elements/PopularProducts";
-import Discover from "./elements/Discover";
-import Features from "./elements/Features";
-import Base from "./elements/Base";
-import Products from "./elements/Products";
-import Blog from "./elements/Blog";
-import Feedback from "./elements/Feedback";
-import Reservation from "./elements/Reservation";
+const Discover = lazy(() => import("./elements/Discover"));
+const Features = lazy(() => import("./elements/Features"));
+const Base = lazy(() => import("./elements/Base"));
+const Products = lazy(() => import("./elements/Products"));
+const Blog = lazy(() => import("./elements/Blog"));
+const Feedback = lazy(() => import("./elements/Feedback"));
+const Reservation = lazy(() => import("./elements/Reservation"));
+import LoadingIndicator from "../mui/LoadingIndicator/LoadingIndicator";
 
 const About = () => {
   return (
@@ -17,14 +20,16 @@ const About = () => {
       <Navbar />
       <Header />
       <PopularProducts />
-      <CoffeeShop />
-      <Discover />
-      <Base />
-      <Features />
-      <Products />
-      <Blog />
-      <Feedback />
-      <Reservation />
+      <Suspense fallback={<LoadingIndicator />}>
+        <CoffeeShop />
+        <Discover />
+        <Base />
+        <Features />
+        <Products />
+        <Blog />
+        <Feedback />
+        <Reservation />
+      </Suspense>
       <Footer />
     </>
   );

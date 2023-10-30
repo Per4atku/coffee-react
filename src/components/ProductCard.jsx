@@ -34,9 +34,9 @@ const ProductCard = ({ name, price, image, rating, hot_cold, color, id }) => {
   };
 
   return (
-    <div className="w-64 p-[14px_16px] bg-white rounded-xl justify-self-center lg:w-80 lg:mt-12">
+    <div className="w-64 p-[14px_16px] bg-white rounded-xl justify-self-center xl:w-80 mui-md:mt-12">
       <div
-        className="w-full h-44 rounded-xl bg-contain bg-center bg-no-repeat lg:h-56"
+        className="w-full h-44 rounded-xl bg-contain bg-center bg-no-repeat xl:h-56"
         style={{ backgroundImage: `url(${image})`, backgroundColor: `${color}` }}>
         <div className="relative top-3 left-1 flex w-16 h-8 p-[3px_4px] items-center justify-center rounded-3xl bg-gradient-to-r from-[#ffffffb3] to-[#ffffff66] backdrop-blur-[2px]">
           <div className="flex justify-center items-center text-[#111] bg-white w-full h-full rounded-3xl text-sm font-bold tracking-[0.56px]">

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Products = () => {
   return (
@@ -10,7 +10,7 @@ const Products = () => {
         <div className="flex rounded-xl bg-[#E1EEE9] p-1.5 justify-between xs:p-2 sm:p-3">
           <div className="product-content self-end">
             <h6>Monthly Deals</h6>
-            <a href="#">Shop Now!</a>
+            <Link to={"/menu#coffee-drinks"}>Shop now!</Link>
           </div>
           <img
             src="/assets/_about/sale.svg"
@@ -26,7 +26,7 @@ const Products = () => {
           />
           <div className="product-content self-start">
             <h6>Whole beans</h6>
-            <a href="#">Shop now!</a>
+            <Link to={"/menu#whole-beans"}>Shop now!</Link>
           </div>
         </div>
         <div className="flex flex-col justify-between row-start-2 row-end-4 bg-white p-1.5 rounded-xl xs:p-2 sm:p-3 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-5">
@@ -37,13 +37,13 @@ const Products = () => {
           />
           <div className="product-content">
             <h6>Coffee Machines</h6>
-            <a href="#">Shop Now!</a>
+            <Link to={"/menu#coffee-machines"}>Shop now!</Link>
           </div>
         </div>
         <div className="flex justify-between rounded-xl p-1.5 bg-[#E1EEE9] xs:p-2 sm:p-3 lg:col-start-2 lg:col-end-3 lg:row-start-4 lg:row-end-5">
           <div className="product-content self-end">
             <h6>Accessories</h6>
-            <a href="#">Shop Now!</a>
+            <Link to={"/menu#accessories"}>Shop now!</Link>
           </div>
           <img
             src="/assets/_about/accessories.svg"
@@ -54,7 +54,7 @@ const Products = () => {
         <div className="flex justify-between rounded-xl p-1.5 bg-[#E1EEE9] xs:p-2 sm:p-3 lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3">
           <div className="product-content self-end">
             <h6>Ground Beans</h6>
-            <a href="#">Shop Now!</a>
+            <Link to={"/menu#ground-beans"}>Shop now!</Link>
           </div>
           <img
             src="/assets/_about/ground_beans.svg"
@@ -70,7 +70,7 @@ const Products = () => {
           />
           <div className="product-content self-start">
             <h6>Coffee Capsules</h6>
-            <a href="#">Shop Now!</a>
+            <Link to={"/menu#coffee-capsules"}>Shop now!</Link>
           </div>
         </div>
         <div className="flex col-start-1 col-end-3 items-center  bg-[#E1EEE9] rounded-xl pl-2 flex-wrap py-2 gap-2 sm:gap-4 lg:col-end-4">

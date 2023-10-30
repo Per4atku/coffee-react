@@ -1,5 +1,6 @@
 import items from "./Base.items";
 import Slider from "react-slick";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Base = () => {
   const settings = {
@@ -49,7 +50,7 @@ const Base = () => {
 
 const Item = ({ name, price, image }) => {
   return (
-    <div className="mx-3 flex flex-col items-center">
+    <Link to={"/menu#accessories"} className="mx-3 flex flex-col items-center">
       <img src={image} alt={name} className="rounded-3xl" />
       <h6>{name}</h6>
       <div className="text-aqua">
@@ -58,7 +59,7 @@ const Item = ({ name, price, image }) => {
           currency: "USD",
         }).format(price)}
       </div>
-    </div>
+    </Link>
   );
 };
 

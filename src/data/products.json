@@ -2,6 +2,7 @@
   {
     "name": "Coffee Drinks",
     "color": "#4BB79E",
+    "id": "coffee-drinks",
     "list": [
       {
         "name": "Espresso",
@@ -40,6 +41,7 @@
   {
     "name": "Whole Beans",
     "color": "#C69C5E",
+    "id": "whole-beans",
     "list": [
       {
         "name": "Starbucks House Blend",

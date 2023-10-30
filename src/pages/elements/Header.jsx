@@ -1,3 +1,5 @@
+import { HashLink as Link } from "react-router-hash-link";
+
 const Header = () => {
   return (
     <header className="wrap flex pt-2 pb-72 bg-bg flex-col sm:flex-row sm:items-center sm:pb-60 lg:pt-5">
@@ -15,16 +17,18 @@ const Header = () => {
             <button className="bg-accent border border-accent border-solid text-white font-medium py-2 px-5 text-xs lg:py-3 lg:px-6 lg:text-sm ">
               <div>Order now</div>
             </button>
-            <button className="border-accent border border-solid py-2 px-5 text-xs font-medium text-accent lg:py-3 lg:px-6 lg:text-sm ">
+            <Link
+              to={"/menu"}
+              className="border-accent border border-solid py-2 px-5 text-xs font-medium text-accent lg:py-3 lg:px-6 lg:text-sm ">
               More menu
-            </button>
+            </Link>
           </div>
         </div>
         <img
           src="/assets/_about/coffee_display.png"
+          onLoad={() => setImageLoaded(true)}
           alt="Coffee"
           className="min-w-[250px] max-w-[300px] w-4/5 mt-10 mx-auto md:max-w-[400px] md:mx-0"
-          loading="lazy"
         />
       </div>
     </header>

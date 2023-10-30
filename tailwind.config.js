@@ -15,7 +15,8 @@ export default {
       },
       screens: {
         "xs": "400px",
-        "md-lg": "830px"
+        "md-lg": "830px",
+        "mui-md": "900px"
       },
       colors: {
         "dark": "#111",
