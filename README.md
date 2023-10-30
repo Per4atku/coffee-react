@@ -10,3 +10,13 @@ or
 2. `cd coffee-react`
 3.  `npm i`  or  `yarn`
 4. `npm run dev` or `yarn dev`
+
+## Technologies Used
+- React
+- Vitejs
+- Redux Toolkit (+redux-persist)
+- React Router
+- Tailwind CSS
+- React Lazy
+- [react-slick](https://react-slick.neostack.com/ "react-slick")
+- [Material UI](https://mui.com/ "Material UI")
