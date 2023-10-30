@@ -45,6 +45,8 @@ Used custom styled *mui* components in Reservation element:
 - DatePicker
 - TimeField
 - Select
+
+  
 ![Reservation preview](https://im.ezgif.com/tmp/ezgif-1-355c6547c7.gif "Reservation preview")
 #### Product item Skeleton
 Used custom *mui* Skeleton component and *React Lazy* for not loaded Product Cards
